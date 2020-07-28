@@ -1,0 +1,37 @@
+/*id选择器的命名不要以数字开头，因为输在在Mozilla/Firefox浏览器中不会起作用*/
+
+
+h1{
+    /*设置背景颜色*/
+    background-color: red;
+    /*设置背景图片,默认在水平和垂直方向平铺*/
+    background-image: url("../img/抠鼻.gif");
+    /*设置图片旨在水平方向上平铺*/
+    background-repeat: repeat-x;
+    /*设置页面移动时背景的展现模式，fixed就是不随页面移动，是固定的*/
+    background-attachment: fixed;
+    /*改变背景图像的位置*/
+    background-position: right top;
+    /*!!!背景简写格式:color imgae repeat attachment postion*/
+    /*background:red url("../img/抠鼻.gif") no-repeat  right top;    */
+
+}
+
+#div1{
+    color: blue;
+
+    width: 50%;
+    height: 2000px;
+    border: red 1px solid;
+
+    background-color: yellow;
+
+    /*文字修饰属性：overline上划线，line-through删除线，underline下划线*/
+    text-decoration: none;
+
+    /*文本大小写转换：uppercase 全部大写  lowercase 全部小写 capitalize  首字母大写*/
+    text-transform: capitalize;
+    /*文本缩进*/
+    text-indent: 50px;
+
+}

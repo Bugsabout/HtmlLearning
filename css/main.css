@@ -1,0 +1,20 @@
+body{
+    background-color: #d2d6ff;
+}
+
+#addresswuxl{
+
+    /*color属性定义元素内容的颜色*/
+    color: red;
+    /*font-size定义字体的大小*/
+    font-size: 20px;
+    /*text-align定义元素内容的对齐方式*/
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+table{
+    border: 1px solid;
+}

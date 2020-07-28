@@ -1,0 +1,174 @@
+<!--！！！根据w3c的要求，一般的标签名和属性名都使用小写的格式-->
+
+<!-- DOCTYPE声明了这个是这是什么类型的网页-->
+<!DOCTYPE html>
+<!--html标签中的lang是给搜索引擎用的，lang表示language，en表示英文站-->
+<html lang="en">
+<head>
+    <!--    ！！可以添加在头部区域的元素标签为: <title>, <style>, <meta>, <link>, <script>, <noscript> 和 <base>。-->
+
+    <!--    base定义了一个前缀路径，这里的所有a标签如果使用相对路径访问都会结合这个前缀-->
+    <!--    <base href="">-->
+
+    <!--    meta标签用来描述HTML文档的关键词，作者，字符集等信息-->
+    <meta charset="UTF-8">
+    <meta name="description" content="免费在线教程">
+    <!--    用于搜索引用的关键字定义-->
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="runoob">
+    <!--    定义每30秒就刷新当前页面-->
+    <meta http-equiv="refresh" content="30">
+    <title>测试页面，获取数据用</title>
+
+
+    <!--    引用外部css样式表的三个属性必不可少：-->
+    <!--        rel：引用的类型-->
+    <!--        type：文件的内容格式-->
+    <!--        href：引用文件的位置-->
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <!--    在head中定义内部样式表，如果定义在元素上，则叫内联样式表-->
+    <style>
+        #addresswuxl {
+            color: blue;
+        }
+
+    </style>
+
+    <script src="../js/test.js" type="application/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!--    h1到h6是标题标签，从小到大-->
+<h1>大型标题</h1>
+<!--    p是段落标签-->
+<p>测试段
+<hr>
+<br>
+<hr>
+落<sub>标</sub><sup>签</sup>p
+</p>
+
+<!--    img标签用于引用图片，alt表示替换图片-->
+<img border="20px" height="50%" src="../img/07.jpg" width="30%" alt=""/>
+<hr>
+<!--    这是一个超链接标签-->
+<a href="test2.html" target="_blank"><b>屠龙</b><strong>宝刀</strong>，<i>点击</i><em>就送</em></a>
+<a href="test2.html#tips"><img src="../img/07.jpg" height="200px" width="200px"></a>
+<a href="#addresswuxl">跳转到邮件地址</a>
+<h2>
+    一下内容是一段代码
+</h2>
+<!--pre标签中的元素内容是什么样子的，展示出来的就是什么样子的-->
+<pre>
+    <strong>
+        <em>
+    var xmlhttp;
+	function check(){
+	  var name = document.getElementById("name").value;
+	  var url = "https://how2j.cn/study/checkName.jsp?name="+name;
+	  
+	  xmlhttp =new XMLHttpRequest();
+	  xmlhttp.onreadystatechange=checkResult; //响应函数
+	  xmlhttp.open("GET",url,true);   //设置访问的页面
+	  xmlhttp.send(null);  //执行访问
+	}
+	  
+	function checkResult(){
+	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+	    document.getElementById('checkResult').innerHTML=xmlhttp.responseText;
+	   
+	}
+        </em>
+    </strong>
+</pre>
+
+<!--需要发送邮件可以通过<a></a>标签的href中的mailto:-->
+<address id="addresswuxl">
+    <!--    mailto:someone@example.com?cc=someoneelse@example.com&bcc=andsomeoneelse@example.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!" target="_top">-->
+    <!--    邮件发送格式： cc=收件人邮箱-->
+    <!--                bcc=抄送人邮箱-->
+    <!--                subject=主题名称-->
+    <!--                body=邮件内容-->
+    上海市闵行区，莘庄康城的<a href="mailto:994232444@qq.com">吴先生</a>
+</address>
+
+
+<table border="1">
+
+    <tr>
+        <th>
+            第一列
+        </th>
+        <th>
+            第二列
+        </th>
+        <th>
+            第三列
+        </th>
+    </tr>
+    <tr>
+        <td>1.1</td>
+        <td>2.1</td>
+        <td>3.1</td>
+    </tr>
+    <tr>
+        <td>1.2</td>
+        <td>2.2</td>
+
+    </tr>
+
+</table>
+
+
+
+
+<div id="container" style="width: 500px">
+    <div id="header" style="background-color: yellowgreen;border: 1px solid red" >
+        <h1 style="border: 1px blue solid">这里是主要的网页标题</h1>
+    </div>
+    <div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+        <b>菜单</b><br>
+        HTML<br>
+        CSS<br>
+        JavaScript</div>
+
+    <div id="content" style="background-color:#EEEEEE;height:200px;width:400px;float:left;">
+        内容在这里</div>
+
+
+    <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+        版权 © runoob.com</div>
+</div>
+
+
+<!--通过表单提交数据到action路径，后端服务器将会获得数据-->
+<form action="http://localhost:8090/main/test">
+    第一个名字：<input type="text" name="firstname"><br>
+    第二个名字：<input type="text" name="secondname">
+
+    <input type="submit" value="提交">
+</form>
+<!--内置网页的框架标签-->
+<iframe src="" frameborder="0" width="500px" height="500px" name="iframe_baidu"></iframe>
+<a href="http://www.baidu.com" target="iframe_baidu">内联页面</a>
+
+
+<!--脚本学习-->
+<div id="demo">
+    <noscript><p>只有在浏览器禁用script的时候，才会显示noscript中的内容</p></noscript>
+    <script>
+        document.write("Hello world!")
+    </script>
+    <button type="button" name="按钮1" onclick="test1()" value="按钮1">点我</button>
+
+<!--    以下格式是字符实体，是HTML中预留的字符格式，需要使用&实体名的格式来使用-->
+    a&#768&nbsp;&nbsp;&nbsp;b&#769
+
+    >
+</div>
+
+
+
+
+</body>
+</html>
